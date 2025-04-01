@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^3.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
