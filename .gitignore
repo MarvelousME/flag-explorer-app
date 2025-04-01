@@ -398,3 +398,27 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+# Dependencies
+node_modules/
+FlagExplorerApp.Frontend/node_modules/
+
+# Build outputs
+FlagExplorerApp.Frontend/build/
+FlagExplorerApp.API/bin/
+FlagExplorerApp.API/obj/
+
+# Database
+FlagExplorerApp.db
+
+# Logs
+FlagExplorerApp.API/logs/
+
+# IDE files
+.vscode/
+*.sln.user
+
+# macOS
+.DS_Store
+
+# Environment variables
+.env

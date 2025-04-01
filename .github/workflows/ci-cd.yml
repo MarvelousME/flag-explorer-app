@@ -1,0 +1,49 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    # Backend
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '8.0.x'
+        
+    - name: Restore Backend Dependencies
+      run: dotnet restore FlagExplorerApp.API
+      
+    - name: Build Backend
+      run: dotnet build FlagExplorerApp.API --no-restore
+      
+    - name: Test Backend
+      run: dotnet test FlagExplorerApp.API --no-build --verbosity normal
+      
+    # Frontend
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        
+    - name: Install Frontend Dependencies
+      run: npm ci
+      working-directory: FlagExplorerApp.Frontend
+      
+    - name: Build Frontend
+      run: npm run build
+      working-directory: FlagExplorerApp.Frontend
+      
+    - name: Test Frontend
+      run: npm test -- --watchAll=false
+      working-directory: FlagExplorerApp.Frontend
+      
+    # Optional: Deploy (add deployment steps here if needed)
