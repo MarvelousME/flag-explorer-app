@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Container, Typography, Box, CircularProgress, Alert } from '@mui/material';
 import { PieChart, Pie, Cell, Tooltip, Legend } from 'recharts';
-import api from './utils/api';
-import logger from '../utils/logger';
+import api from '../Utils/api';
+import logger from '../Utils/logger';
 import { useAuth } from '../AuthContext';
 
 const Dashboard = () => {

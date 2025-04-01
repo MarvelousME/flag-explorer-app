@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import logger from './utils/logger';
+import logger from './Utils/logger';
 
 const AuthContext = createContext();
 

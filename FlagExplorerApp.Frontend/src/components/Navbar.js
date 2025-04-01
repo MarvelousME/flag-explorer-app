@@ -3,7 +3,7 @@ import { AppBar, Toolbar, Typography, Button, IconButton, Menu, MenuItem } from 
 import { Link, useNavigate } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useAuth } from '../AuthContext';
-import logger from '../utils/logger';
+import logger from '../Utils/logger';
 
 const Navbar = () => {
     const { isAuthenticated, user, logout } = useAuth();

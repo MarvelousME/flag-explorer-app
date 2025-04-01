@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Container, Typography, Grid, Card, CardMedia, CardContent, CircularProgress, Alert } from '@mui/material';
-import api from './utils/api';
-import logger from '../utils/logger';
+import api from '../Utils/api';
+import logger from '../Utils/logger';
 
 const FlagGrid = () => {
     const [countries, setCountries] = useState([]);

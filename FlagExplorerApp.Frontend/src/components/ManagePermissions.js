@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Container, Typography, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, CircularProgress, Alert, Button } from '@mui/material';
-import api from './utils/api';
-import logger from '../utils/logger';
+import api from '../Utils/api';
+import logger from '../Utils/logger';
 
 const ManagePermissions = () => {
     const [permissions, setPermissions] = useState([]);

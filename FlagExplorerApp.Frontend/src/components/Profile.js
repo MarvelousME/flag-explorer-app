@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Container, Typography, TextField, Button, Box, Alert, CircularProgress } from '@mui/material';
-import api from './utils/api';
-import logger from '../utils/logger';
+import api from '../Utils/api';
+import logger from '../Utils/logger';
 import { useAuth } from '../AuthContext';
 
 const Profile = () => {

@@ -1,9 +1,9 @@
 import axios from 'axios';
-import logger from '../logger';
+import logger from '../Utils/logger';
 
 // Create an axios instance with the base URL
 const api = axios.create({
-    baseURL: '', // The proxy in package.json will handle this (https://localhost:5001)
+    baseURL: process.env.REACT_APP_API_URL || 'https://localhost:5001', 
     headers: {
         'Content-Type': 'application/json',
         'Accept': '*/*'
